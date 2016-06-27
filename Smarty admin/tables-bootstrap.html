@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Smarty Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+		<!-- WEB FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+
+
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="assets/plugins/bootstrap/RTL/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/bootstrap/RTL/bootstrap-flipped.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layoutr.css" rel="stylesheet" type="text/css" />
+	</head>
+	<!--
+		.boxed = boxed version
+	-->
+	<body>
+
+
+		<!-- WRAPPER -->
+		<div id="wrapper" class="clearfix">
+
+			<!--
+				ASIDE
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+			<aside id="aside">
+				<!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+				<nav id="sideNav"><!-- MAIN MENU -->
+					<ul class="nav nav-list">
+						<li class="active"><!-- dashboard -->
+							<a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) -->
+								<i class="main-icon fa fa-dashboard"></i> <span>داشبورد</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-bar-chart-o"></i> <span>نمودارها</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="graphs-flot.html">فلوت چارت</a></li>
+								<li><a href="#">موریس چارت</a></li>
+								<li><a href="#">نمودار های خطی</a></li>
+								<li><a href="#">نمودار.js</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-table"></i> <span>جداول</span>
+							</a>
+							<ul><!-- submenus -->
+								<li class="active"><a href="tables-bootstrap.html">جدول های بوت استرپ</a></li>
+								<li><a href="#">شبکه جی کوئری</a></li>
+								<li><a href="#">جداول دامنه دار</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										جدول های داده
+									</a>
+									<ul>
+										<li><a href="#">جداول مدیریتی</a></li>
+										<li><a href="#">جداول قابل ویرایش</a></li>
+										<li><a href="#">جداول پیشرفته</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-pencil-square-o"></i> <span>فرم ها</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="#">المنت های اسمارتی</a></li>
+								<li><a href="#">ورودی های نقاب دار</a></li>
+								<li><a href="#">پیکر ها</a></li>
+								<li><a href="#">اسلایدر</a></li>
+								<li><a href="#">فرم های اعتبار سنجی</a></li>
+								<li><a href="#">ورایشگرها</a></li>
+								<li><a href="#">پیشنهاد خودکار</a></li>
+								<li><a href="#">فرم قابل ویرایش</a></li>
+								<li><a href="#">آپلود فایل</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-gears"></i> <span>ویژگی ها</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="#">پورتلت</a></li>
+								<li><a href="#">دکمه ها</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										ایکون
+									</a>
+									<ul>
+										<li><a href="#">فونت بسیار معروف</a></li>
+										<li><a href="#">ایکون</a></li>
+										<li><a href="#">گلیف ایکون</a></li>
+										<li><a href="#">پرچم</a></li>
+									</ul>
+								</li>
+								<li><a href="#">هشدار ها &amp; دیالوگ ها</a></li>
+								<li><a href="#">زبانه ها&amp; منو ها</a></li>
+								<li><a href="#">دایره ها</a></li>
+								<li><a href="#">لیست های تودرتو</a></li>
+								<li><a href="#">اطلاعیه</a></li>
+								<li><a href="#">مودال ها</a></li>
+								<li><a href="#">شبکه</a></li>
+								<li><a href="#">نقشه گوگل</a></li>
+								<li><a href="#">نقشه های برداری</a></li>
+								<li><a href="#">ضروریات</a></li>
+								<li>
+									<a href="#">
+										<i class="fa fa-menu-arrow pull-right"></i>
+										<i class="fa fa-folder-open"></i>
+										منو ی عمیق
+									</a>
+									<!-- 3rd Level -->
+									<ul>
+										<li>
+											<a href="#">
+												سطح 3
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-menu-arrow pull-right"></i>
+												<i class="fa fa-folder-open"></i>
+												سطح 4
+											</a>
+											<!-- 4th Level -->
+											<ul>
+												<li>
+													<a href="#">
+														چهارمین سطح
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<i class="fa fa-menu-arrow pull-right"></i>
+														<i class="fa fa-folder-open"></i>
+														سطح 5
+													</a>
+													<!-- 5th Level -->
+													<ul>
+														<li>
+															<a href="#">
+																پنجمین سطح
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-menu-arrow pull-right"></i>
+																<i class="fa fa-folder-open"></i>
+																سطح 6
+															</a>
+															<!-- 6th Level -->
+															<ul>
+																<li>
+																	<a href="#">
+																		ششمین سطح
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		ششمین سطح
+																	</a>
+																</li>
+															</ul><!-- /6th Level -->
+														</li>
+													</ul><!-- /5th Level -->
+												</li>
+											</ul><!-- /4th Level -->
+										</li>
+									</ul><!-- /3rd Level -->
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-menu-arrow pull-right"></i>
+								<i class="main-icon fa fa-book"></i> <span>صفحات</span>
+							</a>
+							<ul><!-- submenus -->
+								<li><a href="#">صورتحساب</a></li>
+								<li><a href="#">لاگین</a></li>
+								<li><a href="#">رجیستر</a></li>
+								<li><a href="#">قفل صفحه</a></li>
+								<li><a href="#">انجمن</a></li>
+								<li><a href="#">ارور 404</a></li>
+								<li><a href="#">ارور 500</a></li>
+								<li><a href="#">جدول قیمت گذاری</a></li>
+								<li><a href="#">نتیجه جستجو</a></li>
+								<li><a href="#">نوار کناری صفحه</a></li>
+								<li><a href="#">پروفایل کاربر</a></li>
+								<li><a href="#">صفحه خالی</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<!-- SECOND MAIN LIST -->
+					<h3>بیشتر</h3>
+					<ul class="nav nav-list">
+						<li>
+							<a href="#">
+								<i class="main-icon fa fa-calendar"></i>
+								<span class="label label-warning pull-right">2</span> <span>تقویم</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="main-icon fa fa-link"></i>
+								<span class="label label-danger pull-right">PRO</span> <span>ظاهر</span>
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+
+				<span id="asidebg"><!-- aside fixed background --></span>
+			</aside>
+			<!-- /ASIDE -->
+
+
+			<!-- HEADER -->
+			<header id="header">
+
+				<!-- Mobile Button -->
+				<button id="mobileMenuBtn"></button>
+
+				<!-- Logo -->
+				<span class="logo pull-left">
+					<img src="assets/images/logo_light.png" alt="admin panel" height="35" />
+				</span>
+
+				<form method="get" action="#" class="search pull-left hidden-xs">
+					<input type="text" class="form-control" name="k" placeholder="جستجو ..." />
+				</form>
+
+				<nav>
+
+					<!-- OPTIONS LIST -->
+					<ul class="nav pull-right">
+
+						<!-- USER OPTIONS -->
+						<li class="dropdown pull-left">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" />
+								<span class="user-name">
+									<span class="hidden-xs">
+										مرتضی <i class="fa fa-angle-down"></i>
+									</span>
+								</span>
+							</a>
+							<ul class="dropdown-menu hold-on-click">
+								<li><!-- my calendar -->
+									<a href="#"><i class="fa fa-calendar"></i> تقویم</a>
+								</li>
+								<li><!-- my inbox -->
+									<a href="#"><i class="fa fa-envelope"></i> صندوق ورودی
+										<span class="pull-right label label-default">0</span>
+									</a>
+								</li>
+								<li><!-- settings -->
+									<a href="#"><i class="fa fa-cogs"></i> تنضیمات</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li><!-- lockscreen -->
+									<a href="page-lock.html"><i class="fa fa-lock"></i> قفل صفحه</a>
+								</li>
+								<li><!-- logout -->
+									<a href="page-login.html"><i class="fa fa-power-off"></i> خروج</a>
+								</li>
+							</ul>
+						</li>
+						<!-- /USER OPTIONS -->
+
+					</ul>
+					<!-- /OPTIONS LIST -->
+
+				</nav>
+
+			</header>
+			<!-- /HEADER -->
+
+			<!-- 
+				MIDDLE 
+			-->
+			<section id="middle">
+
+
+				<!-- page title -->
+				<header id="page-header">
+					<h1>جداول بوت استرپ</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">جداول</a></li>
+						<li class="active">جداول بوت استرپ</li>
+					</ol>
+				</header>
+				<!-- /page title -->
+
+
+				<div id="content" class="padding-20">
+
+					<!-- 
+						PANEL CLASSES:
+							panel-default
+							panel-danger
+							panel-warning
+							panel-info
+							panel-success
+
+						INFO: 	panel collapse - stored on user localStorage (handled by app.js _panels() function).
+								All pannels should have an unique ID or the panel collapse status will not be stored!
+					-->
+					<div id="panel-1" class="panel panel-default">
+						<div class="panel-heading">
+							<span class="title elipsis">
+								<strong>جدول ساده</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<div class="table-responsive">
+								<table class="table table-bordered table-vertical-middle nomargin">
+									<thead>
+										<tr>
+											<th class="width-30">عکس</th>
+											<th>نام ستون</th>
+											<th>رتبه</th>
+											<th>پیشرفت</th>
+											<th>سهم</th>
+											<th>نام ستون</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 1</td>
+											<td><div class="rating rating-0 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل شده</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-success">تایید شده </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 2</td>
+											<td><div class="rating rating-1 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-info">در انتظار </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 3</td>
+											<td><div class="rating rating-2 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-warning">معلق </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 4</td>
+											<td><div class="rating rating-3 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-danger">مسدود </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 5</td>
+											<td><div class="rating rating-4 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-primary">خالی </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 6</td>
+											<td><div class="rating rating-5 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td>
+												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-edit white"></i> ویرایش </a>
+												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-times white"></i> حذف </a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+						<!-- /panel content -->
+
+						<!-- panel footer -->
+						<div class="panel-footer">
+
+
+							<div class="text-left">
+								<a class="btn btn-xs btn-info">نمایش کد</a>
+							</div>
+
+
+						</div>
+						<!-- /panel footer -->
+
+					</div>
+					<!-- /PANEL -->
+
+					<!-- 
+						PANEL CLASSES:
+							panel-default
+							panel-danger
+							panel-warning
+							panel-info
+							panel-success
+
+						INFO: 	panel collapse - stored on user localStorage (handled by app.js _panels() function).
+								All pannels should have an unique ID or the panel collapse status will not be stored!
+					-->
+					<div id="panel-2" class="panel panel-default">
+						<div class="panel-heading">
+							<span class="title elipsis">
+								<strong>جدول شناور</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<div class="table-responsive">
+								<table class="table table-hover table-vertical-middle nomargin">
+									<thead>
+										<tr>
+											<th class="width-30">عکس</th>
+											<th>نام ستون</th>
+											<th>رتبه</th>
+											<th>پیشرفت</th>
+											<th>سهم</th>
+											<th>نام ستون</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 1</td>
+											<td><div class="rating rating-0 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-success">تایید شده </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 2</td>
+											<td><div class="rating rating-1 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-info">در انتظار </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 3</td>
+											<td><div class="rating rating-2 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-warning">معلق </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 4</td>
+											<td><div class="rating rating-3 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-danger">مسدود </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 5</td>
+											<td><div class="rating rating-4 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-primary">خالی </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 6</td>
+											<td><div class="rating rating-5 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td>
+												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-edit white"></i> ویرایش </a>
+												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-times white"></i> حذف </a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+
+						</div>
+						<!-- /panel content -->
+
+						<!-- panel footer -->
+						<div class="panel-footer">
+
+
+							<div class="text-left">
+								<a class="btn btn-xs btn-info">نمایش کد</a>
+							</div>
+
+						</div>
+						<!-- /panel footer -->
+
+					</div>
+					<!-- /PANEL -->
+
+					<!-- 
+						PANEL CLASSES:
+							panel-default
+							panel-danger
+							panel-warning
+							panel-info
+							panel-success
+
+						INFO: 	panel collapse - stored on user localStorage (handled by app.js _panels() function).
+								All pannels should have an unique ID or the panel collapse status will not be stored!
+					-->
+					<div id="panel-3" class="panel panel-default">
+						<div class="panel-heading">
+							<span class="title elipsis">
+								<strong>جدول راه راه</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<div class="table-responsive nomargin">
+								<table class="table table-bordered table-striped table-vertical-middle">
+									<thead>
+										<tr>
+											<th class="width-30">عکس</th>
+											<th>نام ستون</th>
+											<th>رتبه</th>
+											<th>پیشرفت</th>
+											<th>سهم</th>
+											<th>نام ستون</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 1</td>
+											<td><div class="rating rating-0 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-success">تایید شده </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 2</td>
+											<td><div class="rating rating-1 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-info">در انتظار </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 3</td>
+											<td><div class="rating rating-2 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-warning">معلق </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 4</td>
+											<td><div class="rating rating-3 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-danger">مسدود </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 5</td>
+											<td><div class="rating rating-4 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-primary">خالی </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 6</td>
+											<td><div class="rating rating-5 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td>
+												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-edit white"></i> ویرایش </a>
+												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-times white"></i> حذف </a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+
+						</div>
+						<!-- /panel content -->
+
+						<!-- panel footer -->
+						<div class="panel-footer">
+
+
+							<div class="text-left">
+								<a class="btn btn-xs btn-info" >نمایش کد</a>
+							</div>
+
+
+						</div>
+						<!-- /panel footer -->
+
+					</div>
+					<!-- /PANEL -->
+
+					<!-- 
+						PANEL CLASSES:
+							panel-default
+							panel-danger
+							panel-warning
+							panel-info
+							panel-success
+
+						INFO: 	panel collapse - stored on user localStorage (handled by app.js _panels() function).
+								All pannels should have an unique ID or the panel collapse status will not be stored!
+					-->
+					<div id="panel-4" class="panel panel-default">
+						<div class="panel-heading">
+							<span class="title elipsis">
+								<strong>جدول رنگی</strong> <!-- panel title -->
+							</span>
+
+							<!-- right options -->
+							<ul class="options pull-right list-inline">
+								<li><a href="#" class="opt panel_colapse" data-toggle="tooltip" title="Colapse" data-placement="bottom"></a></li>
+								<li><a href="#" class="opt panel_fullscreen hidden-xs" data-toggle="tooltip" title="Fullscreen" data-placement="bottom"><i class="fa fa-expand"></i></a></li>
+								<li><a href="#" class="opt panel_close" data-confirm-title="Confirm" data-confirm-message="Are you sure you want to remove this panel?" data-toggle="tooltip" title="Close" data-placement="bottom"><i class="fa fa-times"></i></a></li>
+							</ul>
+							<!-- /right options -->
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							<div class="table-responsive">
+								<table class="table table-vertical-middle nomargin">
+									<thead>
+										<tr>
+											<th class="width-30">عکس</th>
+											<th>نام ستون</th>
+											<th>رتبه</th>
+											<th>پیشرفت</th>
+											<th>سهم</th>
+											<th>نام ستون</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="success">
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 1</td>
+											<td><div class="rating rating-0 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-success">تایید شده </span></td>
+										</tr>
+										<tr class="warning">
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 2</td>
+											<td><div class="rating rating-1 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-info">در انتظار </span></td>
+										</tr>
+										<tr class="danger">
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 3</td>
+											<td><div class="rating rating-2 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-warning">معلق </span></td>
+										</tr>
+										<tr class="info">
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 4</td>
+											<td><div class="rating rating-3 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-danger">مسدود </span></td>
+										</tr>
+										<tr class="active">
+											<td class="text-center"><img src="assets/images/male.png" alt="" width="20"></td>
+											<td>مقدار 5</td>
+											<td><div class="rating rating-4 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td><span class="label label-primary">خالی </span></td>
+										</tr>
+										<tr>
+											<td class="text-center"><img src="assets/images/female.png" alt="" width="20"></td>
+											<td>مقدار 6</td>
+											<td><div class="rating rating-5 size-13 width-100"><!-- rating-0 ... rating-5 --></div></td>
+											<td>
+												<div class="progress progress-xxs margin-bottom-0">
+													<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; min-width: 2em;">
+														<span class="sr-only">80% کامل</span>
+													</div>
+												</div>
+											</td>
+											<td>
+												<ul class="list-inline nomargin size-12">
+													<li><a href="#" class="icon-facebook margin-top-6" data-toggle="tooltip" data-placement="top" title="Facebook"></a></li>
+													<li><a href="#" class="icon-twitter margin-top-6" data-toggle="tooltip" data-placement="top" title="Twitter"></a></li>
+													<li><a href="#" class="icon-gplus margin-top-6" data-toggle="tooltip" data-placement="top" title="Google Plus"></a></li>
+													<li><a href="#" class="icon-linkedin margin-top-6" data-toggle="tooltip" data-placement="top" title="Linkedin"></a></li>
+													<li><a href="#" class="icon-pinterest margin-top-6" data-toggle="tooltip" data-placement="top" title="Pinterest"></a></li>
+												</ul>
+											</td>
+											<td>
+												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-edit white"></i> ویرایش </a>
+												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-times white"></i> حذف </a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+						<!-- /panel content -->
+
+						<!-- panel footer -->
+						<div class="panel-footer">
+
+
+							<div class="text-left">
+								<a class="btn btn-xs btn-info">نمایش کد</a>
+							</div>
+
+						</div>
+						<!-- /panel footer -->
+
+					</div>
+					<!-- /PANEL -->
+
+					<!-- 
+						PANEL CLASSES:
+							panel-default
+							panel-danger
+							panel-warning
+							panel-info
+							panel-success
+
+						INFO: 	panel collapse - stored on user localStorage (handled by app.js _panels() function).
+								All pannels should have an unique ID or the panel collapse status will not be stored!
+					-->
+
+					<!-- /PANEL -->
+
+				</div>
+			</section>
+			<!-- /MIDDLE -->
+
+		</div>
+
+
+
+	
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+		<script type="text/javascript" src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+	</body>
+</html>
